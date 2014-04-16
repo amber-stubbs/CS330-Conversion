@@ -1,5 +1,7 @@
 package edu.simmons.cs330sp14.cs330_conversion;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -108,6 +110,7 @@ public class MainActivity extends Activity {
 	}
 	public String fToC(String temp)
 	{
+		//DecimalFormat fm = new DecimalFormat("00.00");
 		//String cel = ""; // the string that will eventually hold the celsius value
 		Double t = Double.parseDouble(temp);
 		t = (t -32)/1.8000;
@@ -115,6 +118,7 @@ public class MainActivity extends Activity {
 	}
 	public String cToF(String temp)
 	{
+		//DecimalFormat fm = new DecimalFormat("00.00");
 		//String far = ""; // the string that will eventually hold the fahrenheit value
 		Double t = Double.parseDouble(temp);
 		t = (t * 1.8000) + 32;
