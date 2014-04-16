@@ -79,12 +79,12 @@ public class MainActivity extends Activity {
 		t.setText("Convert "+num1+" in "+text);	
 		if (text.equals("Decimal"))
 		{
-			convAns = decToHex(num1);
+			convAns = hexToDecimal(num1);
 		}
 		else if (text.equals("Hex")){
-			convAns = hexToDecimal(num1); 
+			convAns = decToHex(num1); 
 		}
-		else if (text.equals("Fahrenheit"))
+		else if (text.equals("Celsius"))
 		{
 			convAns = fToC(num1);
 		}
@@ -95,15 +95,16 @@ public class MainActivity extends Activity {
 		t.setText(num1 + " in " + text + " is " + convAns); 
 	}
 	public String hexToDecimal(String num) {
-		String dec = "";
+		Integer dec = 0;
+		String bin = Integer.toBinaryString(Integer.parseInt(num,16));
+		dec = Integer.parseInt(bin,2);
 	    // more code to come. --ksb 
-	    return dec; 
+	    return dec.toString(); 
 	}
 	public String decToHex(String num)
 	{
 	    Integer hex = Integer.parseInt(num);
-		return Integer.toHexString(hex);
-	    
+		return Integer.toHexString(hex); 
 	}
 	public String fToC(String temp)
 	{
