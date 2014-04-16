@@ -9,7 +9,8 @@
     <string-array name="convert_types">
         <item>Hex</item>
         <item>Decimal</item>
-        <item>Other thing</item>
+        <item>Fahrenheit</item>
+        <item>Celsius</item>
     </string-array>
 
 </resources>
