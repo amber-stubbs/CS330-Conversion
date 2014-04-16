@@ -7,7 +7,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.simmons.cs330sp14.cs330_conversion.MainActivity$PlaceholderFragment" >
-
     
     <EditText
         android:id="@+id/editText1"
@@ -26,28 +25,37 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
-        android:layout_marginTop="57dp"
-        android:text="Medium Text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:text="@string/convert"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="24dp"
-        android:entries="@array/convert_types" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinner1"
         android:layout_below="@+id/spinner1"
+        android:layout_centerHorizontal="true"
         android:onClick="convert"
         android:text="@string/convert" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="72dp"
+        android:entries="@array/convert_types" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinner1"
+        android:layout_toLeftOf="@+id/spinner1"
+        android:text="@string/convert_prompt"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
