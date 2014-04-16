@@ -68,6 +68,7 @@ public class MainActivity extends Activity {
 	
 	public void convert(View view) {
 	    // Do something in response to button
+		String convAns = "";
 		EditText e = (EditText)findViewById(R.id.editText1);
 		String num1 = e.getText().toString();
 
@@ -75,9 +76,48 @@ public class MainActivity extends Activity {
 		String text = sp.getSelectedItem().toString();
 
 		TextView t = (TextView)findViewById(R.id.textView1);
-		t.setText("Convert "+num1+" in "+text);
-		
+		t.setText("Convert "+num1+" in "+text);	
+		if (text.equals("Decimal"))
+		{
+			convAns = decToHex(num1);
+		}
+		else if (text.equals("Hex")){
+			convAns = hexToDecimal(num1); 
+		}
+		else if (text.equals("Fahrenheit"))
+		{
+			convAns = fToC(num1);
+		}
+		else
+		{
+			convAns = cToF(num1);
+		}
+		t.setText(num1 + " in " + text + " is " + convAns); 
+	}
+	public String hexToDecimal(String num) {
+		String dec = "";
+	    // more code to come. --ksb 
+	    return dec; 
+	}
+	public String decToHex(String num)
+	{
+	    Integer hex = Integer.parseInt(num);
+		return Integer.toHexString(hex);
 	    
 	}
-
+	public String fToC(String temp)
+	{
+		String cel = ""; // the string that will eventually hold the celsius value 
+		// code for this method goes here
+		return cel; 
+	}
+	public String cToF(String temp)
+	{
+		String far = ""; // the string that will eventually hold the fahrenheit value
+		// code for this method goes here! 
+		return far; 
+	}
 }
+	
+
+
