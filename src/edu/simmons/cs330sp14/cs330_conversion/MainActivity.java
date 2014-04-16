@@ -107,15 +107,17 @@ public class MainActivity extends Activity {
 	}
 	public String fToC(String temp)
 	{
-		String cel = ""; // the string that will eventually hold the celsius value 
-		// code for this method goes here
-		return cel; 
+		//String cel = ""; // the string that will eventually hold the celsius value
+		Double t = Double.parseDouble(temp);
+		t = (t -32)/1.8000;
+		return t.toString(); 
 	}
 	public String cToF(String temp)
 	{
-		String far = ""; // the string that will eventually hold the fahrenheit value
-		// code for this method goes here! 
-		return far; 
+		//String far = ""; // the string that will eventually hold the fahrenheit value
+		Double t = Double.parseDouble(temp);
+		t = (t * 1.8000) + 32;
+		return t.toString();
 	}
 }
 	
